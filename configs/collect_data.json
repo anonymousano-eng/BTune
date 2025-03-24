@@ -1,0 +1,76 @@
+{
+    "network": "eth0",
+    "block": "sda",
+    "application": "all",
+    "sample_num": 100,
+    "interval": 5,
+    "output_dir": "./",
+    "workload_type": "default",
+    "collection_items": [
+      {
+        "name": "cpu",
+        "module": "CPU",
+        "purpose": "STAT",
+        "metrics": [
+          "iowait",
+          "util"
+        ],
+        "threshold": 30
+      },
+      {
+        "name": "storage",
+        "module": "STORAGE",
+        "purpose": "STAT",
+        "metrics": [
+          "r_await",
+          "w_await"
+        ]
+      },
+      {
+        "name": "network",
+        "module": "NET",
+        "purpose": "STAT",
+        "metrics": [
+          "rxkBs",
+          "txkBs",
+          "rxpcks",
+          "txpcks",
+          "ifutil"
+        ]
+      },
+      {
+        "name": "network-err",
+        "module": "NET",
+        "purpose": "ESTAT",
+        "metrics": [
+          "errs",
+          "util"
+        ]
+      },
+      {
+        "name": "meminfo",
+        "module": "MEM",
+        "purpose": "MEMINFO",
+        "metrics": [
+          "SwapTotal"
+        ]
+      },
+      {
+        "name": "vmstat",
+        "module": "MEM",
+        "purpose": "VMSTAT",
+        "metrics": [
+          "system.cs",
+          "util.swap"
+        ]
+      },
+      {
+        "name": "sys.task",
+        "module": "SYS",
+        "purpose": "TASKS",
+        "metrics": [
+          "cswchs"
+        ]
+      }
+    ]
+  }
