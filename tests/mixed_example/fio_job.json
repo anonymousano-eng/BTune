@@ -1,0 +1,1 @@
+{"fio-version": "fio-3.28", "jobs": [{"jobname": "mix", "rw": "randrw", "rwmixread": 50, "bs": "8k", "iodepth": 4, "direct": 1, "ioengine": "libaio", "size": "1G", "runtime": 30, "time_based": 1, "filename": "benchfile", "group_reporting": 1}]}
